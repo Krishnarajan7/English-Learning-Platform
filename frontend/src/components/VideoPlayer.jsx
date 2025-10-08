@@ -5,7 +5,7 @@ import { useRef, useState, useEffect } from "react";
 
 
 const VideoPlayer = ({ videoUrl, onVideoEnd }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);

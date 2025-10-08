@@ -22,7 +22,7 @@ const About = () => {
             }`}
           >
             <h1 className="font-heading text-4xl md:text-6xl font-bold text-foreground mb-6">
-              About SpeakFlow
+              About BestPracticeWay
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Empowering learners worldwide to master English with confidence and fluency
@@ -35,11 +35,11 @@ const About = () => {
               storyAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <div className="aspect-video rounded-2xl bg-gradient-hero mb-8 flex items-center justify-center">
-              <span className="text-white text-6xl font-heading font-bold">SF</span>
+            <div className="aspect-video rounded-2xl bg-primary mb-8 flex items-center justify-center">
+              <span className="text-primary-foreground text-6xl font-heading font-bold">BW</span>
             </div>
             <p className="text-lg text-foreground leading-relaxed mb-6">
-              Founded in 2020, SpeakFlow has become a trusted platform for English language learners 
+              Founded in 2020, BestPracticeWay has become a trusted platform for English language learners 
               around the globe. Our mission is to break down language barriers and help individuals 
               achieve their personal and professional goals through effective communication.
             </p>
@@ -56,9 +56,9 @@ const About = () => {
               valuesAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <div className="p-8 rounded-2xl bg-gradient-card border border-border hover:shadow-hover transition-all duration-300 animate-fade-in">
-              <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-hero mb-6">
-                <Target className="h-7 w-7 text-white" />
+            <div className="p-8 rounded-2xl bg-card border border-border hover:shadow-hover transition-all duration-300 animate-fade-in">
+              <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-primary mb-6">
+                <Target className="h-7 w-7 text-primary-foreground" />
               </div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -67,9 +67,9 @@ const About = () => {
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl bg-gradient-card border border-border hover:shadow-hover transition-all duration-300 animate-fade-in">
-              <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-gradient-hero mb-6">
-                <Heart className="h-7 w-7 text-white" />
+            <div className="p-8 rounded-2xl bg-card border border-border hover:shadow-hover transition-all duration-300 animate-fade-in">
+              <div className="flex items-center justify-center h-14 w-14 rounded-xl bg-primary mb-6">
+                <Heart className="h-7 w-7 text-primary-foreground" />
               </div>
               <h3 className="font-heading text-2xl font-bold text-foreground mb-4">Our Values</h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -117,7 +117,7 @@ const About = () => {
 
           <div 
             ref={ctaAnimation.ref}
-            className={`text-center bg-gradient-hero text-white rounded-2xl p-12 transition-all duration-1000 ${
+            className={`text-center bg-primary text-primary-foreground rounded-2xl p-12 transition-all duration-1000 ${
               ctaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >

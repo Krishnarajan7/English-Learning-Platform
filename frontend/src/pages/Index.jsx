@@ -78,8 +78,15 @@ const Index = () => {
           heroAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="absolute inset-0 bg-gradient-hero opacity-5" />
-        <div className="container px-4 relative">
+        <div className="absolute inset-0 bg-primary/5" />
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-20 left-10 text-6xl opacity-20 animate-bounce">🎈</div>
+        <div className="absolute top-40 right-20 text-5xl opacity-20 animate-bounce" style={{ animationDelay: '0.5s' }}>📚</div>
+        <div className="absolute bottom-20 left-20 text-5xl opacity-20 animate-bounce" style={{ animationDelay: '1s' }}>📖</div>
+        <div className="absolute bottom-40 right-10 text-6xl opacity-20 animate-bounce" style={{ animationDelay: '1.5s' }}>🎈</div>
+        
+        <div className="container px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-4">
               <Sparkles className="h-4 w-4" />
@@ -88,7 +95,7 @@ const Index = () => {
             
             <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground leading-tight">
               Master English with{" "}
-              <span className="bg-gradient-hero bg-clip-text text-transparent">
+              <span className="text-primary">
                 Confidence
               </span>
             </h1>
@@ -99,7 +106,7 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Button size="lg" className="bg-gradient-hero hover:opacity-90 text-white font-semibold px-8">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 font-semibold px-8">
                 Start Learning Free
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -127,8 +134,8 @@ const Index = () => {
                 key={index}
                 className="group p-6 rounded-xl bg-card border border-border hover:shadow-soft transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-hero mb-4 group-hover:scale-110 transition-transform">
-                  <feature.icon className="h-6 w-6 text-white" />
+                <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary mb-4 group-hover:scale-110 transition-transform">
+                  <feature.icon className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
                   {feature.title}
@@ -187,7 +194,7 @@ const Index = () => {
       {/* CTA Section */}
       <section 
         ref={ctaAnimation.ref}
-        className={`py-20 bg-gradient-hero text-white transition-all duration-1000 ${
+        className={`py-20 bg-primary text-primary-foreground transition-all duration-1000 ${
           ctaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
@@ -203,7 +210,7 @@ const Index = () => {
               <Button size="lg" variant="secondary" className="px-8">
                 Create Free Account
               </Button>
-              <Button size="lg" variant="outline" className="px-8 border-white text-white hover:bg-white/20">
+              <Button size="lg" variant="outline" className="px-8 border-primary-foreground hover:bg-primary-foreground/20">
                 Watch Demo
               </Button>
             </div>
@@ -214,13 +221,13 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-12 border-t border-border">
         <div className="container px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div className="space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            <div className="space-y-4 sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-2">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-hero">
-                  <span className="font-heading text-xl font-bold text-white">SF</span>
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+                  <span className="font-heading text-xl font-bold text-primary-foreground">BP</span>
                 </div>
-                <span className="font-heading text-xl font-bold">SpeakFlow</span>
+                <span className="font-heading text-xl font-bold">BestPracticeWay</span>
               </div>
               <p className="text-sm text-muted-foreground">
                 Your trusted partner in English language learning
@@ -259,7 +266,7 @@ const Index = () => {
           </div>
           
           <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>© 2024 SpeakFlow. All rights reserved.</p>
+            <p>© 2025 BestPracticeWay. All rights reserved.</p>
           </div>
         </div>
       </footer>

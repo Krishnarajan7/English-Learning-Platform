@@ -67,20 +67,20 @@ const Contact = () => {
                 </h2>
                 
                 <div className="space-y-6">
-                  <div className="flex items-start gap-4 p-6 rounded-xl bg-gradient-card border border-border hover:shadow-soft transition-all duration-300">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-hero flex-shrink-0">
-                      <Mail className="h-6 w-6 text-white" />
+                  <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:shadow-soft transition-all duration-300">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary flex-shrink-0">
+                      <Mail className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                      <p className="text-muted-foreground">support@speakflow.com</p>
-                      <p className="text-muted-foreground">info@speakflow.com</p>
+                      <p className="text-muted-foreground">support@best.com</p>
+                      <p className="text-muted-foreground">info@best.com</p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-6 rounded-xl bg-gradient-card border border-border hover:shadow-soft transition-all duration-300">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-hero flex-shrink-0">
-                      <Phone className="h-6 w-6 text-white" />
+                  <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:shadow-soft transition-all duration-300">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary flex-shrink-0">
+                      <Phone className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Phone</h3>
@@ -89,9 +89,9 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-6 rounded-xl bg-gradient-card border border-border hover:shadow-soft transition-all duration-300">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-hero flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-white" />
+                  <div className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:shadow-soft transition-all duration-300">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary flex-shrink-0">
+                      <MapPin className="h-6 w-6 text-primary-foreground" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">Office</h3>
@@ -124,7 +124,7 @@ const Contact = () => {
             </div>
 
             <div className="">
-              <div className="p-8 rounded-2xl bg-gradient-card border border-border shadow-soft">
+              <div className="p-8 rounded-2xl bg-card border border-border shadow-soft">
                 <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
                   Send Us a Message
                 </h2>
@@ -188,7 +188,7 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-gradient-hero hover:opacity-90" size="lg">
+                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
                     Send Message
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
