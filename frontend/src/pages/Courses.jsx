@@ -76,17 +76,17 @@ const Courses = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      <div className="container px-4 py-12">
+      <div className="container px-4 md:px-6 py-12 md:py-16">
         <div 
           ref={heroAnimation.ref}
-          className={`max-w-3xl mb-12 transition-all duration-1000 ${
+          className={`max-w-3xl mb-8 md:mb-12 transition-all duration-1000 ${
             heroAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-3 md:mb-4">
             Explore Our Courses
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base md:text-lg text-muted-foreground">
             Choose from our expertly crafted courses designed to help you achieve fluency in English
           </p>
         </div>
@@ -97,12 +97,12 @@ const Courses = () => {
             coursesAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <Tabs defaultValue="all" className="mb-8">
-          <TabsList className="bg-muted">
-            <TabsTrigger value="all">All Courses</TabsTrigger>
-            <TabsTrigger value="beginner">Beginner</TabsTrigger>
-            <TabsTrigger value="intermediate">Intermediate</TabsTrigger>
-            <TabsTrigger value="advanced">Advanced</TabsTrigger>
+          <Tabs defaultValue="all" className="mb-6 md:mb-8">
+          <TabsList className="bg-muted w-full md:w-auto grid grid-cols-2 md:inline-grid md:grid-cols-4 gap-1">
+            <TabsTrigger value="all" className="text-xs md:text-sm">All Courses</TabsTrigger>
+            <TabsTrigger value="beginner" className="text-xs md:text-sm">Beginner</TabsTrigger>
+            <TabsTrigger value="intermediate" className="text-xs md:text-sm">Intermediate</TabsTrigger>
+            <TabsTrigger value="advanced" className="text-xs md:text-sm">Advanced</TabsTrigger>
           </TabsList>
           
           <TabsContent value="all" className="mt-8">
@@ -141,11 +141,11 @@ const Courses = () => {
 
         <div 
           ref={ctaAnimation.ref}
-          className={`mt-12 text-center transition-all duration-1000 ${
+          className={`mt-8 md:mt-12 text-center transition-all duration-1000 ${
             ctaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <p className="text-muted-foreground mb-4">
+          <p className="text-sm md:text-base text-muted-foreground mb-4">
             Can't find what you're looking for?
           </p>
           <Button size="lg" variant="outline">

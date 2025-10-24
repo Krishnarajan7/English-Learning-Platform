@@ -22,9 +22,9 @@ const Navigation = () => {
       <div className="container flex h-14 items-center justify-between px-6">
         <Link to="/" className="flex items-center space-x-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <span className="font-heading text-lg font-bold text-primary-foreground">BW</span>
+            <span className="font-heading text-lg font-bold text-primary-foreground">SF</span>
           </div>
-          <span className="font-heading text-xl font-bold text-foreground">BestPracticeWay</span>
+          <span className="font-heading text-xl font-bold text-foreground">SpeakFlow</span>
         </Link>
 
         <div className="hidden md:flex items-center space-x-1 ml-8">
@@ -42,9 +42,10 @@ const Navigation = () => {
           </Link>
         </div>
 
-        <div className="hidden md:flex items-center space-x-3 ml-auto">
-          <Button variant="outline" size="sm">Sign In</Button>
-          <Button size="sm" className="bg-primary hover:bg-primary/90">Get Started</Button>
+        <div className="hidden md:flex items-center ml-auto">
+          <Link to="/register">
+            <Button size="sm" className="bg-primary hover:bg-primary/90">Register</Button>
+          </Link>
         </div>
 
         <button
@@ -56,10 +57,10 @@ const Navigation = () => {
         </button>
       </div>
 
-      <div className={`md:hidden border-t border-border bg-background overflow-hidden transition-all duration-300 ease-in-out ${
+      <div className={`md:hidden absolute top-full left-0 right-0 border-t border-border bg-background shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${
         isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
       }`}>
-        <div className="container px-4 py-4 space-y-4">
+        <div className="container px-6 py-4 space-y-4">
           <div className="flex flex-col space-y-3">
             <Link to="/" className="text-sm font-medium text-foreground hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               Home
@@ -73,8 +74,9 @@ const Navigation = () => {
             <Link to="/contact" className="text-sm font-medium text-foreground hover:text-primary" onClick={() => setIsMenuOpen(false)}>
               Contact
             </Link>
-            <Button variant="outline" className="w-full">Sign In</Button>
-            <Button className="w-full bg-primary hover:bg-primary/90">Get Started</Button>
+            <Link to="/register" className="w-full" onClick={() => setIsMenuOpen(false)}>
+              <Button className="w-full bg-primary hover:bg-primary/90">Register</Button>
+            </Link>
           </div>
         </div>
       </div>

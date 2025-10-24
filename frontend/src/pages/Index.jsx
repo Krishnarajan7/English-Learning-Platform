@@ -74,47 +74,62 @@ const Index = () => {
       {/* Hero Section */}
       <section 
         ref={heroAnimation.ref}
-        className={`relative overflow-hidden py-20 md:py-32 transition-all duration-1000 ${
+        className={`relative overflow-hidden py-24 md:py-40 transition-all duration-1000 ${
           heroAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="absolute inset-0 bg-primary/5" />
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,182,193,0.1),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(152,193,180,0.1),transparent_50%)]" />
         
-        {/* Decorative Elements */}
-        <div className="absolute top-20 left-10 text-6xl opacity-20 animate-bounce">🎈</div>
-        <div className="absolute top-40 right-20 text-5xl opacity-20 animate-bounce" style={{ animationDelay: '0.5s' }}>📚</div>
-        <div className="absolute bottom-20 left-20 text-5xl opacity-20 animate-bounce" style={{ animationDelay: '1s' }}>📖</div>
-        <div className="absolute bottom-40 right-10 text-6xl opacity-20 animate-bounce" style={{ animationDelay: '1.5s' }}>🎈</div>
-        
-        <div className="container px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent-foreground text-sm font-medium mb-4">
-              <Sparkles className="h-4 w-4" />
-              <span>Your journey to English fluency starts here</span>
+        <div className="container px-4 md:px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-primary/20 bg-background/80 backdrop-blur-sm text-sm font-medium shadow-sm">
+              <Sparkles className="h-4 w-4 text-primary" />
+              <span className="text-foreground">Your journey to English fluency starts here</span>
             </div>
             
-            <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground leading-tight">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight tracking-tight">
               Master English with{" "}
-              <span className="text-primary">
+              <span className="text-primary relative inline-block">
                 Confidence
+                <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 5.5C50 2.5 150 2.5 199 5.5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" className="text-primary/30"/>
+                </svg>
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Transform your English skills through expert-led video lessons, interactive courses, 
               and a supportive learning community designed for your success.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 font-semibold px-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 font-semibold px-8 shadow-lg hover:shadow-xl transition-all">
                 Start Learning Free
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Link to="/courses">
-                <Button size="lg" variant="outline" className="px-8">
+              <Link to="/courses" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="w-full px-8 border-2 hover:bg-accent/10">
                   Explore Courses
                 </Button>
               </Link>
+            </div>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4 sm:gap-8 pt-8 max-w-2xl mx-auto">
+              <div className="space-y-1">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">10K+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Active Students</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">50+</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Expert Courses</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">4.9★</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Average Rating</div>
+              </div>
             </div>
           </div>
         </div>
@@ -123,11 +138,11 @@ const Index = () => {
       {/* Features Section */}
       <section 
         ref={featuresAnimation.ref}
-        className={`py-20 bg-muted/30 transition-all duration-1000 ${
+        className={`py-16 md:py-20 bg-muted/30 transition-all duration-1000 ${
           featuresAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="container px-4">
+        <div className="container px-4 md:px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div 
@@ -152,11 +167,11 @@ const Index = () => {
       {/* Featured Courses Section */}
       <section 
         ref={coursesAnimation.ref}
-        className={`py-20 transition-all duration-1000 ${
+        className={`py-16 md:py-20 transition-all duration-1000 ${
           coursesAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="container px-4">
+        <div className="container px-4 md:px-6">
           <div className="flex items-center justify-between mb-12">
             <div>
               <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-2">
@@ -194,11 +209,11 @@ const Index = () => {
       {/* CTA Section */}
       <section 
         ref={ctaAnimation.ref}
-        className={`py-20 bg-primary text-primary-foreground transition-all duration-1000 ${
+        className={`py-16 md:py-20 bg-primary text-primary-foreground transition-all duration-1000 ${
           ctaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
-        <div className="container px-4">
+        <div className="container px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="font-heading text-3xl md:text-5xl font-bold">
               Ready to Transform Your English?
@@ -219,24 +234,26 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 border-t border-border">
-        <div className="container px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            <div className="space-y-4 sm:col-span-2 lg:col-span-1">
-              <div className="flex items-center space-x-2">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                  <span className="font-heading text-xl font-bold text-primary-foreground">BP</span>
-                </div>
-                <span className="font-heading text-xl font-bold">BestPracticeWay</span>
+      <footer className="py-12 md:py-16 border-t border-border">
+        <div className="container px-4 md:px-6">
+          {/* Logo Section - Full width on mobile */}
+          <div className="mb-10 md:mb-12 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start space-x-2 mb-4">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+                <span className="font-heading text-xl font-bold text-primary-foreground">SF</span>
               </div>
-              <p className="text-sm text-muted-foreground">
-                Your trusted partner in English language learning
-              </p>
+              <span className="font-heading text-xl font-bold">SpeakFlow</span>
             </div>
-            
+            <p className="text-sm text-muted-foreground max-w-md mx-auto md:mx-0">
+              Your trusted partner in English language learning
+            </p>
+          </div>
+
+          {/* Links Grid - 2 columns on mobile, 3 on tablet, 3 on desktop */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-10">
             <div>
-              <h4 className="font-semibold mb-4">Courses</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h4 className="font-semibold mb-4 text-sm md:text-base">Courses</h4>
+              <ul className="space-y-2.5 text-xs md:text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-primary transition-colors">Beginner</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Intermediate</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Advanced</a></li>
@@ -245,8 +262,8 @@ const Index = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <h4 className="font-semibold mb-4 text-sm md:text-base">Company</h4>
+              <ul className="space-y-2.5 text-xs md:text-sm text-muted-foreground">
                 <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
                 <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
@@ -254,9 +271,9 @@ const Index = () => {
               </ul>
             </div>
             
-            <div>
-              <h4 className="font-semibold mb-4">Support</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+            <div className="col-span-2 md:col-span-1">
+              <h4 className="font-semibold mb-4 text-sm md:text-base">Support</h4>
+              <ul className="space-y-2.5 text-xs md:text-sm text-muted-foreground">
                 <li><a href="#" className="hover:text-primary transition-colors">Help Center</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-primary transition-colors">Terms of Service</a></li>
@@ -265,8 +282,8 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>© 2025 BestPracticeWay. All rights reserved.</p>
+          <div className="pt-8 border-t border-border text-center text-xs md:text-sm text-muted-foreground">
+            <p>© 2025 SpeakFlow. All rights reserved.</p>
           </div>
         </div>
       </footer>
